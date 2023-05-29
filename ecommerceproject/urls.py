@@ -20,10 +20,8 @@ from django.urls import path,re_path
 from django.conf.urls import include
 urlpatterns = [
     path('admin/', admin.site.urls),
-
-    path('registration/',include('registration.urls')),
+    path('homeapp/', include('homeapp.urls')),
+    path('registration/', include('registration.urls')),
     path('accounts/', include('django.contrib.auth.urls')),
     path('productapp/', include('productapp.urls')),
-
-    re_path('^.*$', include('homeapp.urls')),
 ]
